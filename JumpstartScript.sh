@@ -21,7 +21,7 @@ mkdir temp
 cd temp
 
 # Cloning the generator
-echo "Copying requisite dependencies in " + $PWD
+echo "Copying requisite dependencies in " $PWD
 git clone https://github.com/moldedbits/generator-jumpstart-generator.git
 
 if brew ls --versions == null
@@ -30,7 +30,7 @@ if brew ls --versions == null
     else 
         echo "HomeBrew is installed..................................................................."
         # Installing the Node Package
-        if which node == null
+        if ! type "$node --version" > /dev/null
             then 
                 echo "Node is not installed..........................................................."
                 echo "Installing Node................................................................."
@@ -39,7 +39,7 @@ if brew ls --versions == null
                 echo "Node is installed."
             fi
 
-        if which npm  == null
+        if ! type "$npm -version" > /dev/null
             then
                 # Installing NPM
                 echo "Installing NPM............................................................................"
@@ -50,8 +50,9 @@ if brew ls --versions == null
                 npm update -g
             fi
 
-        if which yo == null
-            then
+
+        if ! type "$yo --version" > /dev/null
+                then
                 # Installing Yo
                 echo "Installing Yeoman............................................................................."
                 npm install --global yo
