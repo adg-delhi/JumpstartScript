@@ -12,6 +12,7 @@ from distutils.dir_util import copy_tree
 # 2. Auto push to newly created repo
 # 3. build.gradle processor which allows to add/remove libraries on the fly
 #    and other stuff
+# 4. Add a logger/silent mode
 
 package=""
 projectName=""
@@ -32,9 +33,9 @@ def createNewDirectories():
         if(projectName == ""):
             print("Project name cannot be empty")
 
-    # TODO tobe removed
-    if(os.path.exists(projectName)):
-        shutil.rmtree(projectName)
+    # Keeping for testing purposes
+    # if(os.path.exists(projectName)):
+    #    shutil.rmtree(projectName)
 
     print("Copying stuff from " + jumpstartDirectoryName + " to " + projectName)
     shutil.copytree(jumpstartDirectoryName, projectName)
