@@ -18,9 +18,9 @@ package=""
 projectName=""
 
 # Jumpstart Project Configuration
-jumpstartPackage = "com.moldedbits.android"
-jumpstartDirectoryName = "android-jumpstart"
-jumpstartRepoURL = "https://github.com/moldedbits/android-jumpstart.git"
+jumpstartPackage = "com.adgdelhi.jumpstart"
+jumpstartDirectoryName = "AndroidJumpstart"
+jumpstartRepoURL = "https://github.com/adg-delhi/AndroidJumpstart.git"
 srcRelativeRoot = "/app/src/<srcSet>/java/"
 
 def cloneJumpstartRepo():
@@ -29,7 +29,7 @@ def cloneJumpstartRepo():
 def createNewDirectories():
     global projectName
     while (not projectName):
-        projectName = raw_input("Enter new app name: ")
+        projectName = raw_input("Enter new app name(e.g. Jumpstart): ")
         if(projectName == ""):
             print("Project name cannot be empty")
 
@@ -88,7 +88,7 @@ cloneJumpstartRepo()
 createNewDirectories()
 
 while (not package):
-    package = raw_input("Enter new app package: ")
+    package = raw_input("Enter new app package(e.g. com.google.inbox): ")
     if(package == ""):
         print("Package name cannot be empty")
 
