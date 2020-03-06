@@ -1,5 +1,5 @@
 # Jumpstart-Generator
-This is a script which clones and customize [Android Jumpstart](https://github.com/moldedbits/android-jumpstart) project for you. It requires `python` in order to work.
+This is a script which clones and customize [Android Jumpstart](https://github.com/adg-delhi/AndroidJumpstart) project for you. It requires `python` in order to work.
 
 ## Usage
 1. Copy this script at desired location.
